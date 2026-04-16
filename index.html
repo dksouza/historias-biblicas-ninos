@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historias Bíblicas para Niños | Educa con Valores</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck
+        data-utmify-prevent-subids async defer></script>
+
+    <script>
+        window.pixelId = "69cd9cca01825047fcaf1427";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+    </script>
+
+    <style>
+        :root {
+            --primary: #023047;
+            /* Dark Blue */
+            --secondary: #219EBC;
+            /* Soft Blue */
+            --accent: #FFB703;
+            /* Gold CTA */
+            --accent-hover: #FB8500;
+            --bg-light: #F8F9FA;
+            --bg-white: #FFFFFF;
+            --text-dark: #1D3557;
+            --text-muted: #457B9D;
+            --danger: #E63946;
+            --success: #2A9D8F;
+            --radius-md: 12px;
+            --radius-lg: 24px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-light);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            /* Mobile first, keeps lines short */
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-alt {
+            background: var(--bg-white);
+        }
+
+        .section-accent {
+            background: var(--primary);
+            color: var(--bg-white);
+        }
+
+        .section-accent h2,
+        .section-accent p {
+            color: var(--bg-white);
+        }
+
+        .section-blue {
+            background: #E8F1F5;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-1 {
+            margin-top: 0.5rem;
+        }
+
+        .mt-2 {
+            margin-top: 1rem;
+        }
+
+        .mt-3 {
+            margin-top: 1.5rem;
+        }
+
+        .mt-4 {
+            margin-top: 2rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 1rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 2rem;
+        }
+
+        .highlight {
+            color: var(--secondary);
+        }
+
+        .highlight-danger {
+            color: var(--danger);
+        }
+
+        /* Buttons */
+        .cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: var(--accent);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 1.25rem;
+            padding: 1.2rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 10px 20px rgba(255, 183, 3, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse-animation 2s infinite;
+            text-align: center;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .cta-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(251, 133, 0, 0.5);
+        }
+
+        .cta-subtext {
+            display: block;
+            font-size: 0.85rem;
+            text-align: center;
+            margin-top: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        @keyframes pulse-animation {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 183, 3, 0.7);
+            }
+
+            70% {
+                transform: scale(1.03);
+                box-shadow: 0 0 0 15px rgba(255, 183, 3, 0);
+            }
+
+        }
+
+        /* Carousel */
+        .carousel-wrapper {
+            position: relative;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 1.5rem 0;
+            background: transparent;
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+        }
+
+        .carousel-track {
+            display: flex;
+            width: max-content;
+        }
+
+        .track-left {
+            animation: scrollLeft 40s linear infinite;
+        }
+
+        .track-right {
+            animation: scrollRight 40s linear infinite;
+        }
+
+        .carousel-item {
+            width: 240px;
+            aspect-ratio: 4/5;
+            flex-shrink: 0;
+            padding: 0 0.75rem;
+        }
+
+        .carousel-img-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            border: 4px solid var(--bg-white);
+        }
+
+        .carousel-img-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes scrollRight {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--danger);
+            color: white;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 3rem 0;
+            background: linear-gradient(to bottom, #E8F1F5, var(--bg-light));
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 span {
+            color: var(--secondary);
+            text-decoration: underline;
+            text-decoration-color: var(--accent);
+            text-decoration-thickness: 4px;
+        }
+
+        .hero p.subheadline {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+        }
+
+        .hero-img-container {
+            position: relative;
+            margin-bottom: 2rem;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(2, 48, 71, 0.1);
+        }
+
+        .hero-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+        }
+
+        /* Video/Img Placeholder */
+        .placeholder-media {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background: #D9E2E8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-weight: bold;
+            border-radius: var(--radius-lg);
+        }
+
+        /* Pain Points */
+        .pain-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .pain-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background: var(--bg-white);
+            padding: 1.25rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            border-left: 4px solid var(--danger);
+            font-weight: 600;
+        }
+
+        .pain-list li i {
+            color: var(--danger);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* Solution & Value Stack */
+        .value-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .value-card {
+            background: var(--bg-white);
+            border: 2px solid #E8F1F5;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .value-icon {
+            width: 64px;
+            height: 64px;
+            background: #E8F1F5;
+            color: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem auto;
+            font-size: 2rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-card p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* Benefits - Checklist */
+        .benefit-list {
+            list-style: none;
+        }
+
+        .benefit-list li {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .benefit-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 28px;
+            height: 28px;
+            background: var(--success);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        /* Testimonials */
+        .testimonial {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            margin-bottom: 1.5rem;
+            border: 1px solid #EAEAEA;
+            text-align: left;
+        }
+
+        .stars {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .testi-text {
+            font-style: italic;
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+
+        .testi-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .testi-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #D9E2E8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+        .testi-name {
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* Offer Box */
+        .offer-box {
+            background: var(--bg-white);
+            border: 3px dashed var(--accent);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            position: relative;
+            margin-top: 3rem;
+        }
+
+        .offer-badge {
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .price-container {
+            margin: 1.5rem 0;
+        }
+
+        .price-old {
+            text-decoration: line-through;
+            color: var(--danger);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .price-new {
+            font-size: 4rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            color: var(--success);
+            line-height: 1;
+        }
+
+        .price-new span {
+            font-size: 1.5rem;
+            position: relative;
+            top: -30px;
+        }
+
+        /* Bonuses */
+        .bonus-item {
+            background: #FFF9E6;
+            /* Light yellow */
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .bonus-title {
+            color: var(--accent-hover);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Guarantee */
+        .guarantee {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: #E8F1F5;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            margin: 3rem 0;
+        }
+
+        .guarantee-icon {
+            font-size: 4rem;
+            color: var(--secondary);
+            flex-shrink: 0;
+        }
+
+        .guarantee-text h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .guarantee-text p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* FAQ Accordion */
+        .faq-item {
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+            border: 1px solid #EAEAEA;
+        }
+
+        .faq-question {
+            padding: 1.25rem;
+            font-weight: 800;
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 1.25rem 1.25rem;
+            color: var(--text-dark);
+            display: none;
+            /* hidden by default, toggled with JS */
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: #A0B2C0;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: #A0B2C0;
+            text-decoration: underline;
+            margin: 0 0.5rem;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: #A0B2C0;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p.subheadline {
+                font-size: 1.3rem;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .section {
+                padding: 5rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Urgency Top Bar -->
+    <div class="top-bar">
+        🕒 Oferta Flash: 90% de Descuento termina hoy
+    </div>
+
+    <!-- HERO SECTION -->
+    <header class="section hero">
+        <div class="container">
+            <h1>Descubre cómo enseñar <span>Valores Bíblicos</span> a tus hijos de forma divertida y sin esfuerzo...
+            </h1>
+            <p class="subheadline">...incluso si sientes que no tienes tiempo o tus hijos están todo el día frente a
+                pantallas sin aprender nada de valor.</p>
+
+            <div class="hero-img-container">
+                <!-- Using Unsplash as a beautiful placeholder representing family, reading, peace -->
+                <img src="mockup.png" alt="Padre e hijo leyendo" class="hero-img">
+            </div>
+
+            <button class="cta-btn mt-2" onclick="scrollToOffer()">
+                SÍ, QUIERO ACCEDER AHORA <i class="ph-bold ph-arrow-right"></i>
+            </button>
+            <span class="cta-subtext">Acesso inmediato • Cientos de padres ya están dentro</span>
+        </div>
+    </header>
+
+    <!-- IDENTIFICATION SECTION (PAIN POINTS) -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="text-center">Como padres, todos compartimos el mismo <span
+                    class="highlight-danger">miedo...</span></h2>
+            <p class="text-center mt-2">Sabemos lo difícil que es criar hijos con valores cristianos en el mundo
+                acelerado de hoy. ¿Te suena familiar alguna de estas situaciones?</p>
+
+            <ul class="pain-list">
+                <li>
+                    <i class="ph-fill ph-warning-circle"></i>
+                    Tus hijos pasan horas frente al celular viendo contenido vacío que no les aporta nada bueno.
+                </li>
+                <li>
+                    <i class="ph-fill ph-warning-circle"></i>
+                    Llegas cansado del trabajo y sientes que no tienes la energía o el tiempo para sentarte a enseñarles
+                    historias de la Biblia.
+                </li>
+                <li>
+                    <i class="ph-fill ph-warning-circle"></i>
+                    Temes por las influencias negativas del mundo moderno y cómo podrían afectar su carácter.
+                </li>
+                <li>
+                    <i class="ph-fill ph-warning-circle"></i>
+                    Cuando intentas leerles la Biblia, se aburren rápidamente o no logran entender el mensaje oculto.
+                </li>
+            </ul>
+
+            <p class="text-center mt-3" style="font-weight: 700; font-size: 1.2rem;">
+                No es tu culpa. La educación bíblica tradicional no está adaptada para las mentes de los niños de hoy.
+            </p>
+        </div>
+    </section>
+
+    <!-- TRANSITION / SOLUTION -->
+    <section class="section section-blue">
+        <div class="container text-center">
+            <h2>Imagina que aprender sobre Dios fuera la parte <span class="highlight">más emocionante</span> de su día
+            </h2>
+            <p class="mt-2">¿Qué pasaría si pudieras transformar el "tiempo de pantalla" de tus hijos en "tiempo de
+                calidad con Jesús"?</p>
+            <p>Con herramientas diseñadas visualmente para captar su atención, aprenderán principios eternos de bondad,
+                obediencia, fe y amor familiar, todo mientras se divierten.</p>
+
+            <h3 class="mt-4 mb-2" style="font-size: 1.8rem;">Te presentamos...</h3>
+            <img src="assets/libro_ilustrado_sin_texto.png" alt="Libro ilustrado"
+                style="width:100%; border-radius: var(--radius-md); box-shadow: 0 10px 20px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+
+            <h1 style="color: var(--secondary); font-size: 2.2rem; margin-bottom: 1rem;">Pequeños Héroes de la Biblia
+            </h1>
+            <p style="font-weight: bold;">El programa digital completo para formar el carácter de tus hijos en casa.</p>
+        </div>
+    </section>
+
+    <!-- CAROUSEL SECTION -->
+    <section class="section" style="padding-top: 0; padding-bottom: 2rem; overflow: hidden; background: #E8F1F5;">
+        <div class="container text-center mb-4">
+            <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Mira un vistazo de lo que recibirás...</h2>
+            <p style="color: var(--text-muted); font-weight: 600;">Páginas e ilustraciones que capturarán la atención de
+                tus pequeños (y la tuya también).</p>
+        </div>
+        <div class="carousel-wrapper">
+            <!-- Row 1: Left -->
+            <div class="carousel-track track-left">
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/1.png" alt="Página 1"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/2.png" alt="Página 2"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/3.png" alt="Página 3"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/4.png" alt="Página 4"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/5.png" alt="Página 5"></div>
+                </div>
+                <!-- Duplicate -->
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/1.png" alt="Página 1"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/2.png" alt="Página 2"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/3.png" alt="Página 3"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/4.png" alt="Página 4"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/5.png" alt="Página 5"></div>
+                </div>
+            </div>
+            <!-- Row 2: Right -->
+            <div class="carousel-track track-right mt-3">
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/5.png" alt="Página 5"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/4.png" alt="Página 4"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/3.png" alt="Página 3"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/2.png" alt="Página 2"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/1.png" alt="Página 1"></div>
+                </div>
+                <!-- Duplicate -->
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/5.png" alt="Página 5"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/4.png" alt="Página 4"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/3.png" alt="Página 3"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/2.png" alt="Página 2"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/1.png" alt="Página 1"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXERCISES CAROUSEL -->
+    <section class="section" style="padding-top: 0; padding-bottom: 2rem; overflow: hidden; background: #E8F1F5;">
+        <div class="container text-center mb-4">
+            <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Y divertidos ejercicios interactivos...</h2>
+            <p style="color: var(--text-muted); font-weight: 600;">Para consolidar los valores aprendidos de forma
+                entretenida. Estos son sólo algunos:</p>
+        </div>
+        <div class="carousel-wrapper">
+            <!-- Row 1: Left -->
+            <div class="carousel-track track-left">
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/6.png" alt="Ejercicio 1"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/7.png" alt="Ejercicio 2"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/8.png" alt="Ejercicio 3"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/9.png" alt="Ejercicio 4"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/10.png" alt="Ejercicio 5"></div>
+                </div>
+                <!-- Duplicate -->
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/6.png" alt="Ejercicio 1"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/7.png" alt="Ejercicio 2"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/8.png" alt="Ejercicio 3"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/9.png" alt="Ejercicio 4"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/10.png" alt="Ejercicio 5"></div>
+                </div>
+            </div>
+            <!-- Row 2: Right -->
+            <div class="carousel-track track-right mt-3">
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/10.png" alt="Ejercicio 5"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/9.png" alt="Ejercicio 4"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/8.png" alt="Ejercicio 3"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/7.png" alt="Ejercicio 2"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/6.png" alt="Ejercicio 1"></div>
+                </div>
+                <!-- Duplicate -->
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/10.png" alt="Ejercicio 5"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/9.png" alt="Ejercicio 4"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/8.png" alt="Ejercicio 3"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/7.png" alt="Ejercicio 2"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-img-inner"><img src="assets/6.png" alt="Ejercicio 1"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUE STACK (WHAT YOU GET) -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="text-center">¿Qué incluye el acceso hoy?</h2>
+
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">📚</div>
+                    <h3>Biblioteca de Historias Ilustradas</h3>
+                    <p>Libros digitales a todo color. Relatos bíblicos adaptados con un lenguaje sencillo para que los
+                        niños amen leer sobre Dios.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🎬</div>
+                    <h3>Videos Animados Mágicos</h3>
+                    <p>Las historias cobran vida. Menos contenido tóxico en YouTube y más videos que fortalecen su fe e
+                        intelecto.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🧠</div>
+                    <h3>Actividades de Refuerzo</h3>
+                    <p>Ejercicios interactivos, rompecabezas y retos que garantizan que el aprendizaje y los valores se
+                        queden en su memoria.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🙏</div>
+                    <h3>Guía de Valores Cristianos</h3>
+                    <p>Enseñanzas prácticas enfocadas en fomentar el respeto, la gratitud y la obediencia en el
+                        comportamiento diario en casa.</p>
+                </div>
+            </div>
+
+            <div class="mt-4 text-center">
+                <button class="cta-btn" onclick="scrollToOffer()">
+                    VER OFERTA ESPECIAL <i class="ph-bold ph-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center mb-4">La transformación que verás en tu hogar:</h2>
+            <ul class="benefit-list">
+                <li>Niños más obedientes, pacíficos y respetuosos gracias a los ejemplos de los héroes bíblicos.</li>
+                <li>Una conexión espiritual firme desde pequeños que los protegerá en el futuro.</li>
+                <li>Menos tiempo perdido en aplicaciones inútiles o dañinas.</li>
+                <li>Tranquilidad absoluta para ti, sabiendo que estás cumpliendo tu propósito de guiarlos en el buen
+                    camino.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="text-center mb-4">Padres que ya transformaron sus hogares</h2>
+
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testi-text">"Mi hijo de 6 años no prestaba atención cuando le hablaba sobre Dios. Desde que
+                    usamos este material, él mismo me pide ver los videos y leer antes de dormir. Su actitud en casa ha
+                    mejorado muchísimo."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">M</div>
+                    <div>
+                        <p class="testi-name">María González</p>
+                        <p style="font-size: 0.8rem; margin:0; color:var(--text-muted);">Madre de dos (México)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testi-text">"Sinceramente no tenía tiempo por el trabajo, esto fue una salvación. En solo 10
+                    minutos al día logramos conectar, aprenden y yo siento que soy el padre que quiero ser. Vale cada
+                    centavo."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">C</div>
+                    <div>
+                        <p class="testi-name">Carlos Rivera</p>
+                        <p style="font-size: 0.8rem; margin:0; color:var(--text-muted);">Padre de un niño (Colombia)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFER & PRICING -->
+    <section class="section section-blue" id="oferta">
+        <div class="container">
+            <div class="offer-box">
+                <div class="offer-badge">Acceso Ilimitado</div>
+                <h2>Todo el Sistema de "Pequeños Héroes"</h2>
+                <p class="mt-2 text-muted">La inversión más pequeña con el impacto más grande para el futuro de tus
+                    hijos.</p>
+
+                <div class="price-container">
+                    <div class="price-old">Precio Normal: $97.00</div>
+                    <div class="price-new"><span>$</span>9.90<span>USD</span></div>
+                    <p style="color: var(--success); font-weight: bold; font-size: 0.9rem;">(Pago único - Acceso de por
+                        vida)</p>
+                </div>
+
+                <div class="text-left mt-3 mb-4">
+                    <h4 class="mb-2" style="font-size: 1.1rem;">🎁 BÓNUS EXCLUSIVOS HOY:</h4>
+
+                    <div class="bonus-item">
+                        <div class="bonus-title"><i class="ph-fill ph-gift"></i> #1: Guía para Padres Ocupados</div>
+                        <p style="font-size: 0.9rem; margin:0; color: var(--text-dark);">Cómo responder a las preguntas
+                            difíciles de los niños sobre Dios.</p>
+                    </div>
+                    <div class="bonus-item">
+                        <div class="bonus-title"><i class="ph-fill ph-book-open"></i> #2: Rutinas de Oración Infantil
+                        </div>
+                        <p style="font-size: 0.9rem; margin:0; color: var(--text-dark);">Tarjetas descargables para
+                            enseñarles a orar antes de dormir.</p>
+                    </div>
+                    <div class="bonus-item">
+                        <div class="bonus-title"><i class="ph-fill ph-printer"></i> #3: Actividades Imprimibles</div>
+                        <p style="font-size: 0.9rem; margin:0; color: var(--text-dark);">Dibujos para colorear y juegos
+                            físicos.</p>
+                    </div>
+                </div>
+
+                <a href="https://pay.hotmart.com/J105415329G" class="cta-btn" style="text-decoration: none;">
+                    QUIERO INSCRIBIR A MIS HIJOS <i class="ph-bold ph-shield-check"></i>
+                </a>
+                <span class="cta-subtext">Compra 100% Segura. Entrega inmediata por Email.</span>
+
+                <!-- Guarantee -->
+                <div class="guarantee"
+                    style="background: transparent; border: 1px solid #D9E2E8; padding: 1.5rem; margin-top: 2rem;">
+                    <i class="ph-fill ph-seal-check guarantee-icon" style="font-size: 3.5rem;"></i>
+                    <div class="guarantee-text text-left">
+                        <h3>Garantía de 7 Días</h3>
+                        <p>Si a tus hijos no les fascina el material, pide la devolución con un clic. Cero riesgos.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="text-center mb-4">Preguntas Frecuentes</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Mi hijo es muy inquieto, ¿le prestará atención?
+                    <i class="ph-bold ph-caret-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    Sí. El material fue diseñado específicamente buscando mantener la atención interactiva de niños
+                    inquietos. Los videos y las ilustraciones coloridas atrapan su atención más rápido que una historia
+                    convencional.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    ¿No tengo tiempo, podré usarlo?
+                    <i class="ph-bold ph-caret-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    Absolutamente. Las sesiones están diseñadas para tomar entre 5 y 10 minutos al día. Incluso puedes
+                    simplemente poner los videos ilustrados mientras haces tus tareas.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    ¿Para qué edades es recomendado?
+                    <i class="ph-bold ph-caret-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    El sistema está ideado idealmente para niños desde los 3 hasta los 10 años, adaptando el tipo de
+                    actividad (lectura, video o dinámica) a su etapa.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    ¿Cómo recibo el acceso?
+                    <i class="ph-bold ph-caret-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    Inmediatamente después de tu compra segura de $9.90, recibirás un correo electrónico con tus
+                    credenciales de acceso para entrar a la plataforma y descargar o ver todo el material.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>Este sitio no es parte del sitio web de Facebook o Facebook Inc. Adicionalmente, este sitio no está
+                respaldado por Facebook de ninguna manera. FACEBOOK es una marca comercial de FACEBOOK, Inc.</p>
+            <div class="mt-2">
+                <a href="#">Términos de Uso</a> |
+                <a href="#">Privacidad</a> |
+                <a href="mailto:soporte@pequenosheroes.com">soporte@pequenosheroes.com</a>
+            </div>
+            <p class="mt-2">&copy; 2026 Histórias Bíblicas para Niños. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Smooth scroll to offer
+        function scrollToOffer() {
+            document.getElementById('oferta').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // FAQ Toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // Close all
+                faqItems.forEach(i => i.classList.remove('active'));
+
+                // Toggle current
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
